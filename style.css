@@ -24,11 +24,17 @@ header{
 header .btn{
     background-color: transparent;
     outline: none;
-    border: 2px solid hsl(321, 100%, 78%);
-    color: hsl(321, 100%, 78%);
-    padding: 0.5rem 1.5rem;
+    border: 2px solid hsl(322, 100%, 66%);
+    color: hsl(322, 100%, 66%);
+    padding: 0.5rem 1rem;
+    max-width: 7rem;
     border-radius: 25px;
     cursor: pointer;
+}
+header .btn:hover{
+    background-color: transparent;
+    border-color: hsl(321, 100%, 78%) ;
+    color: hsl(321, 100%, 78%) ;
 }
 header .logo{
     cursor: pointer;
@@ -73,6 +79,8 @@ section img{
     margin-top: 5rem;
     width:90%;
     height: auto;
+    user-select: none;
+    pointer-events: none;
 }
 .grid{
     display: grid;
@@ -94,6 +102,8 @@ section img{
 }
 .four img,.five img,.eight img{
     width: 70%;
+    user-select: none;
+    pointer-events: none;
 }
 .grid div p{
     color:hsl(192, 100%, 9%)
@@ -104,6 +114,8 @@ section img{
 .one img,.two img{
     width: 2rem;
     transform: translateX(-4.5rem);
+    user-select: none;
+    pointer-events: none;
 }
 .grid div h2{
     font-family: 'Poppins';
@@ -112,7 +124,103 @@ section img{
     align-self: flex-start;
     margin-bottom: 1.5rem;
 }
-
+footer{
+    display: grid;
+    background: url(images/bg-footer-top-desktop.svg) ;
+    background-repeat: no-repeat;
+    padding-top: 7rem;
+    grid-template-columns: 50% 50%;
+}
+footer .left
+{
+    background-color: hsl(192, 100%, 9%);
+    padding: 7rem  5rem 1.5rem;
+}
+footer .right{
+    background-color: hsl(192, 100%, 9%);
+    padding: 4.5rem  5rem 1.5rem;
+    margin-top: 2.5rem;
+}
+footer .left .logo-1{
+    filter: brightness(0) invert(1);
+    max-width: 12rem;
+    margin-bottom: 1rem;
+}
+footer .left p{
+    color: #fff;
+    max-width: 25rem;
+}
+footer .contact{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+footer i{
+    color: #fff;
+    margin-right: 1rem;
+}
+.social-media{
+    margin-top: 3rem;
+}
+.social-media i{
+    font-size: 1.5em;
+    text-decoration: none;
+}
+.right h2 ,
+.right p{
+    color: #fff;
+    margin-bottom: 1rem;
+    max-width: 25rem;
+}
+.input{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+.input input{
+    border: none;
+    outline: none;
+    border-radius: 0.3rem;
+    width: 15rem;
+    padding: 0.7rem;
+    margin-right: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+.input button{
+    background-color: hsl(322, 100%, 66%);
+    border: none;
+    outline: none;
+    margin-bottom: 0.5rem;
+    border-radius: 0.3rem;
+    padding: 0.7rem 1rem;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+.right *,.left *{
+    z-index: 1;
+}
+button:hover{
+    background-color: hsl(321, 100%, 78%);
+}
+.fa-facebook:hover{
+    color: #4267B2;
+}
+.fa-instagram:hover{
+  color: transparent;
+  background: -webkit-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: -o-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.fa-twitter:hover{
+    color: #00acee;
+}
+.fa-phone-volume{
+    transform: rotate(-30deg)
+}
 /* ---------------- MEDIA QUERIES -------------------- */
 @media only screen and (max-width: 1024px){
     section p{
@@ -164,5 +272,18 @@ section img{
     }
     .grid div p{
         font-size: 1.2em;
+    }
+    footer{
+        grid-template-columns: 100%;
+    }
+    .left{
+        order: 2;
+    }
+    .right{
+        order: 1;
+    }
+    footer .left,footer .right{
+        padding-left: 4rem;
+        padding-right: 4rem;
     }
 }
